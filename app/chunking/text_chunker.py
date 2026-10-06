@@ -9,8 +9,7 @@ class TextChunker:
         while start < len(text):
             end = start + self.__chunk_size
             chunk = text[start:end]
-            if len(chunk) == self.__chunk_size:
-                chunks.append(chunk)
+            chunks.append(chunk)
             start = start + self.__chunk_size - self.__overlap
         return chunks
 
